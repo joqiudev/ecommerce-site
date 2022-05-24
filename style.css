@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 30px;
+}
+
+header{
+    background-image: url(images/books.jpeg);
+    height:95vh;
+    background-size: cover;
+    background-position: top;
+}
+
+.logo{
+  font-family: "Cedarville Cursive", cursive;
+  position: absolute;
+  padding-left: 1rem;
+}
+
+ul{
+  padding-top: 1.4rem;
+}
+
+li {
+  display: inline;
+  position: relative;
+  left: 70%;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-family: "Josefin Slab", sans-serif;
+    margin: 0px 1.5rem 0 1.5rem;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: rgb(169, 230, 219);
+    position: absolute;
+    top: 1.2em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
