@@ -19,17 +19,46 @@ header{
   font-family: "Cedarville Cursive", cursive;
   position: absolute;
   padding-left: 1rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+}
+
+@keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 ul{
   padding-top: 1.4rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
 }
+
+@keyframes moveInRight{
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 li {
   display: inline;
   position: relative;
   left: 70%;
 }
+
 
 a {
     text-decoration: none;
